@@ -1,0 +1,15 @@
+
+.slide_box, .navbar-static-top .slide_box, .navbar-fixed-top .slide_box, .navbar-fixed-bottom .slide_box { width: 530px; }
+
+.slide_box { margin-right: auto; margin-left: auto; *zoom: 1; }
+
+.slide_box h5 { line-height:30px; border-bottom:1px solid #dadada}
+
+.slide_box:before, .slide_box:after { display: table; content: ""; line-height: 0; }
+
+.slide_box:after { clear: both; }
+
+
+/* Type styles */
+h5 { text-transform: uppercase; }
+

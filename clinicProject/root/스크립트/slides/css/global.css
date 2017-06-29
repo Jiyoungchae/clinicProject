@@ -1,0 +1,108 @@
+
+/* 
+	Resets defualt browser settings
+	reset.css
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td { margin:0; padding:0; border:0; outline:0;vertical-align:baseline; }
+
+:focus { outline:0; }
+
+a:active { outline:none; }
+
+body { line-height:1; color:black; background:white; }
+
+ol, ul { list-style:none; }
+
+table { border-collapse:separate; border-spacing:0; }
+
+caption, th, td { text-align:left; font-weight:normal; }
+
+blockquote:before, blockquote:after, q:before, q:after { content:""; }
+
+blockquote, q { quotes:"" ""; }
+
+/*
+	Page style
+*/
+body { font:normal 62.5%/1.5 Helvetica, Arial, sans-serif; letter-spacing:0; color:#434343; padding:20px 0; position:relative; text-shadow:0 1px 0 rgba(255, 255, 255, .8); -webkit-font-smoothing: subpixel-antialiased; }
+
+#container { width:506px; padding:10px; margin:0 auto; position:relative; z-index:0; }
+
+#example { width:506px; height:153px; position:relative; }
+
+#ribbon { position:absolute; top:-3px; left:-15px; z-index:500; }
+
+#frame { position:absolute; z-index:0; width:588px; height:180px; top:-3px; left:-80px; }
+
+/*
+	Slideshow
+*/
+
+#slides { position:absolute; top:0; left:4px; z-index:100; }
+
+/*
+	Slides container
+	Important:
+	Set the width of your slides container
+	Set to display none, prevents content flash
+*/
+
+.slides_container { width:506px; overflow:hidden; position:relative; display:none; }
+
+.slides_titlte { clear:both; margin:10px 10px 0 0; padding: font-size:24px; color:#333; border-bottom:1px solid #999; z-index:999 }
+/*
+	Each slide
+	Important:
+	Set the width of your slides
+	If height not specified height will be set by the slide content
+	Set to display block
+*/
+
+.slides_container div.slide { width:506px; height:153px; display:block;margin:30px 0 0 0}
+
+.slides_container div.slide .icn_img { float:left; display:inline; margin:0; padding:10px 10px 0 0; }
+
+.slides_container div.slide .caption { z-index:500; position:relative; float:right; left:0; margin:10px; padding:10px 10px 0 0; width:332px; font-size:1.3em; line-height:1.33; color:#000; text-shadow:none; }
+
+.market_title { text-transform:uppercase; font-size:18px; font-weight:bold; color:#666666;}
+
+.more_icn { float:left; padding:0 0 0 30px !important;}
+
+.fc_skyBlue02 { color:#4c8ccb !important; }
+
+/*
+	Next/prev buttons
+*/
+
+#slides .next, #slides .prev { position:absolute; top:50px; left:-50px; width:24px; height:43px; display:block; z-index:101; }
+
+#slides .next { left:455px; }
+
+/*
+	Pagination
+*/
+
+.pagination2 { position:absolute; margin:0 auto; width:100px; top:10px; right:0}
+
+.pagination2 li { float:left; margin:0 1px; list-style:none; }
+
+.pagination2 li a { display:block; width:12px; height:0; padding-top:12px; background-image:url(../img/pagination.png); background-position:0 0; float:left; overflow:hidden; }
+
+.pagination2 li.current a { background-position:0 -12px; }
+
+
+/*
+	Footer
+*/
+
+#footer { text-align:center; width:580px; margin-top:9px; padding:4.5px 0 18px; border-top:1px solid #dfdfdf; }
+
+#footer p { margin:4.5px 0; font-size:1.0em; }
+
+/*
+	Anchors
+*/
+
+a:link, a:visited { color:#599100; text-decoration:none; }
+
+a:hover, a:active { color:#599100; text-decoration:underline; }

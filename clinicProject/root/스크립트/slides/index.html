@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Slides, A Slideshow Plugin for jQuery</title>
+	<link rel="stylesheet" href="css/global.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+	<script src="js/slides.min.jquery.js"></script>
+	<script>
+		$(function(){
+			$('#slides').slides({
+				preload: true,
+				preloadImage: 'img/loading.gif',
+				play: 5000,
+				pause: 2500,
+				hoverPause: true,
+				animationStart: function(current){
+					$('.caption').animate({
+						bottom:-35
+					},100);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationStart on slide: ', current);
+					};
+				},
+				animationComplete: function(current){
+					$('.caption').animate({
+						bottom:0
+					},200);
+					if (window.console && console.log) {
+						// example return of current slide number
+						console.log('animationComplete on slide: ', current);
+					};
+				},
+				slidesLoaded: function() {
+					$('.caption').animate({
+						bottom:0
+					},200);
+				}
+			});
+		});
+	</script>
+	</head>
+	<body>
+<div id="container">
+   <div id="example">
+      <div id="slides">
+          <div class="slides_container">
+             <div class="slide">
+                <div class="icn_img"><img src="img/slide_01.PNG" width="113" height="105" alt="Slide 1"></div>
+                <div class="caption" >
+                  <p class="market_title"><span class="fc_skyBlue02">Korea Lottery</span> Market</p>
+                  <p>Korea's lottery business model currently has a 3-tier structure...... </p>
+                </div>
+                <div class="more_icn">
+                   <a href="#" title="Korea Lottery Market" target="_blank"><img src="img/more_gray.jpg" width="58" height="16" alt="more_icon"></a>
+               </div>
+            </div>
+            <!-- slide 1-->
+            <div class="slide">
+               <div class="icn_img"><img src="img/slide_02.PNG" width="113" height="105" alt="Slide 2"></div>
+               <div class="caption">
+                  <p class="market_title"><span class="fc_skyBlue02">Annual</span> Lottery Sales</p>
+                  <p>Annual Lottery Sales Breakdown of Lottery Sales by product type </p>
+               </div>
+               <div class="more_icn">
+                  <a href="#" title="Annual Lottery Sales" target="_blank"><img src="img/more_gray.jpg" width="58" height="16" alt="more_icon"></a>
+               </div>
+            </div>
+            <!-- slide 2-->
+            <div class="slide">
+               <div class="icn_img"><img src="img/slide_03.PNG" width="113" height="105" alt="Slide 3"></div>
+               <div class="caption">
+                  <p class="market_title"><span class="fc_skyBlue02">Lottery </span> Operators</p>
+                  <p>Lottery Business Model<br>
+                  Primary Lottery Operators<br>
+                  Secondary Internet Lottery Operator</p>
+               </div>
+               <div class="more_icn">
+                  <a href="#" title="Lottery Operators" target="_blank"><img src="img/more_gray.jpg" width="58" height="16" alt="more_icon"></a>
+               </div>
+           </div>
+           <!-- slide 3--> 
+       </div>
+       <!-- slides_container --> 
+       <a href="#" class="prev"><img src="img/arrow-prev.png" width="12" height="23" alt="Arrow Prev"></a> 
+       <a href="#" class="next"><img src="img/arrow-next.png" width="12" height="23" alt="Arrow Next"></a> 
+    </div>
+    <!-- id-slides -->
+    <h1 class="slides_titlte">Korea Lottery Market</h1>
+  </div>
+  <!-- example --> 
+</div>
+<!-- container -->
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr">
+<title>SlidesJS Standard Code Example</title>
+<meta name="description" content="SlidesJS is a simple slideshow plugin for jQuery. Packed with a useful set of features to help novice and advanced developers alike create elegant and user-friendly slideshows.">
+<meta name="author" content="Nathan Searles">
+<meta name="viewport" content="width=device-width">
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> 
+<script src="js/jquery.slides.min.js"></script> 
+<style>
+body { -webkit-font-smoothing: antialiased; font:18px/100% "맑은고딕", Malgun Gothic, Arial, Helvetica, sans-serif; font-style:normal; color: #232525; padding:100px; }
+
+#slides { display: none }
+
+#slides .slidesjs-navigation { margin-top:5px; }
+
+#slides .img_s { width:530; height:105px; background: url(img/slide_01.png) no-repeat 0 0; }
+
+a.slidesjs-next { background-image: url(img/btns-next-prev.png) ; background-repeat: no-repeat; display:block; width:12px; height:18px; overflow: hidden; text-indent: -9999px; float: left; margin-right:5px; z-index:9999}
+
+a.slidesjs-previous { background-image: url(img/btns-next-prev.png); background-repeat: no-repeat; display:block; width:12px; height:18px; overflow: hidden; text-indent: -9999px; float: left; margin-right:5px; z-index:9999}
+
+/*a.slidesjs-play { background-image: url(img/btns-next-prev.png); background-repeat: no-repeat; display:block; width:12px; height:18px; overflow: hidden; text-indent: -9999px; float: left; margin-right:5px; z-index:9999}
+
+a.slidesjs-stop { background-image: url(img/btns-next-prev.png); background-repeat: no-repeat; display:block; width:12px; height:18px; overflow: hidden; text-indent: -9999px; float: left; margin-right:5px; z-index:9999}*/
+
+a.slidesjs-next { margin-right:10px; background-position: -12px 0; }
+
+a:hover.slidesjs-next { background-position: 302px -18px; }
+
+a.slidesjs-previous { postion:absolute; top:0; left:100px; margin-right:550px;}
+
+a:hover.slidesjs-previous { background-position: 0 -18px; margin-right:550px;}
+
+a.slidesjs-play { width:15px; background-position: -25px 0; }
+
+a:hover.slidesjs-play { background-position: -25px -18px; }
+
+a.slidesjs-stop { width:18px; background-position: -41px 0; }
+
+a:hover.slidesjs-stop { background-position: -41px -18px; }
+
+.slidesjs-pagination { margin: 7px 0 0; float: right; list-style: none; }
+
+.slidesjs-pagination li { float: left; margin: 0 1px; }
+
+.slidesjs-pagination li a { display: block; width: 13px; height: 0; padding-top: 13px; background-image: url(img/pagination.png); background-position: 0 0; float: left; overflow: hidden; }
+
+.slidesjs-pagination li a.active, .slidesjs-pagination li a:hover.active { background-position: 0 -13px }
+
+.slidesjs-pagination li a:hover { background-position: 0 -26px }
+
+#slides a:link, #slides a:visited { color: #333 }
+
+#slides a:hover, #slides a:active { color: #9e2020 }
+
+.slide_box { margin-right: auto; margin-left: auto; *zoom: 1; }
+
+.slide_box h5 { line-height:30px; border-bottom:1px solid #dadada}
+
+.slide_box:before, .slide_box:after { display: table; content: ""; line-height: 0; }
+
+.slide_box:after { clear: both; }
+
+</head>
+<body>
+.scnd { width:588px; height:180px; }
+
+h5 { text-transform: uppercase; }
+</style>
+<div class="scnd">
+<div class="slide_box">
+<h5>Korea Lottery Market</h5>
+  <div id="slides">
+    <div class="img_s">
+      <h3>Korea Lottery Market</h3>
+      Korea's lottery business model currently 
+      has a 3-tier structure...... 
+    </div>
+    <div class="img_s">
+      <h3>Annual Lottery Sales</h3>
+      Annual Lottery Sales Breakdown of Lottery Sales by product type
+    </div>
+    <div class="img_s">
+      <h3>Lottery Operators</h3>
+      Lottery Business Model Primary Lottery Operators Secondary Internet Lottery Operator
+    </div>
+  </div>
+  <!--slides -->
+</div>
+<!--slide_box --></div>
+<script>
+    $(function() {
+      $('#slides').slidesjs({
+        width: 530,
+        height: 170,
+        play: {
+          active: true,
+          auto: true,
+          interval: 4000,
+          swap: true
+        }
+      });
+    });
+  </script>
+</body>
+</html>
